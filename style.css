@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background: hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .nftCard {
+    width: 25rem;
+    height: 40rem;
+    background: hsl(216, 50%, 16%);
+    padding: 1.5rem;
+    border-radius:10px;
+}
+
+main .nftCard .nftImage {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    cursor: pointer;
+}
+
+
+main .nftCard .nftImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+main .nftCard .nftImage .view1{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top: 0;
+    background:hsl(178, 100%, 50%);
+    opacity: 0;
+    border-radius: 10px;
+}
+main .nftCard .nftImage .view{
+    position: absolute;
+    width:20%;
+    height: 20%;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    display: none;
+    z-index:1;
+}
+
+main .nftCard .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
+}
+
+main .nftCard .content h1 {
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    cursor: pointer;
+}
+main .nftCard .content p{
+    font-size:18px;
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+main .nftCard .content .ethPrice{
+    display: flex;
+    justify-content: space-between;
+}
+main .nftCard .content .ethPrice .ethContent{
+    display: flex;
+    gap: 0.5rem;
+}
+main .nftCard .content .ethPrice .ethContent .price{
+    color:hsl(178, 100%, 50%);
+    font-weight:400;
+}
+main .nftCard .content .ethPrice .ethTime{
+    display: flex;
+    gap: 0.5rem;
+    
+}
+main .nftCard .content hr{
+    background-color: hsl(215, 51%, 70%);
+    border: none;
+    height: 1px;
+
+}
+main .nftCard .content .avatar{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+main .nftCard .content .avatar .avatarImage{
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+main .nftCard .content .avatar .avatarImage img{
+    width:100%;
+    height: 100%;
+}
+main .nftCard .content .avatar p .avatar-varient{
+    color: white;
+    cursor: pointer;
+}
+
+
+/* media query */
+@media screen and (max-width:376px){
+    main .nftCard {
+        width: 20rem;
+        height: 35rem;
+    }
+}
+/* media query end */
+/* hover effects */
+main .nftCard .nftImage:hover .view{
+    display: block;
+}
+main .nftCard .nftImage:hover .view1{
+    opacity: 0.3;
+}
+main .nftCard .content h1:hover{
+    color: hsl(178, 100%, 50%);
+}
+main .nftCard .content .avatar p .avatar-varient:hover{
+    color: hsl(178, 100%, 50%);
+}
